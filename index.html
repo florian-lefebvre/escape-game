@@ -2,40 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="//unpkg.com/alpinejs" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="importmap">
+          {
+            "imports": {
+              "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+            }
+          }
+        </script>
+  <script src="../scripts/vue-app.js" type="module"></script>
+</head>
 
 <body>
-    <h1>Escape game test encore</h1>
-    <p>C'est comme Unlock.</p>
-
-    <div x-data="{ open: false }">
-        <button @click="open = !open">Expand</button>
-
-        <span x-show="open">
-            Content...
-        </span>
-    </div>
-
-
-    <pre id="content"></pre>
-
-    <script>
-        async function main() {
-            const res = await fetch("./data.json")
-            const data = await res.json()
-            console.log(data)
-            const params = new URLSearchParams(window.location.search)
-            const id = params.get("id")
-            const card = data.find(e => e.id === id)
-            document.querySelector("#content").innerHTML = JSON.stringify(card, null, 2)
-        }
-
-        main()
-    </script>
+  <div id="app">
+    <h1>Home</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur eos reiciendis cumque aliquam dolorum est
+      soluta ipsa eligendi ea deleniti, adipisci error iusto quo voluptatum. Excepturi, illum corporis. Delectus, eaque.
+      Fuga, deserunt. Quibusdam illum eligendi ducimus inventore tempora ipsam dolore ea quod exercitationem temporibus.
+      Expedita incidunt fugit aliquam voluptatibus cumque.</p>
+  </div>
 </body>
 
 </html>
