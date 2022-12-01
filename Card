@@ -1,0 +1,14 @@
+class Card{
+
+    constructor(id, type, desc, title, img, elements, code, step){
+        this.id = id;
+        this.type=type;
+        this.desc= desc;
+        this.title= title;
+        this.img= img;
+        this.elements=elements
+        this.code= code;
+        this.step= step;
+    }
+
+}
