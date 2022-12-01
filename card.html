@@ -39,28 +39,16 @@
         <p>{{ showInventory }}</p>
         <p>{{ urlParams }}</p>
         <pre>{{ selectedCard }}</pre>
-        <div>
-
-            <li v-for="card in data">
-                <div class="card">
-                    <h1 class="card-title text-center">{{selectedCard.title}}</h1>
-
-                    <img class="card-img-top" :src="selectedCard.img" alt="Some Images">
-
-                    <p class="card-text text-center">{{selectedCard.desc}}</p>
-                </div>
-            </li>
+        <div class="modal" v-show="showInventory">
+            <button @click="showInventory = false">Close</button>
+            <ul>
+                <li v-for="card in inventory">{{ card }}</li>
             </ul>
-            <div class="modal" v-show="showInventory">
-                <button @click="showInventory = false">Close</button>
-                <ul>
-                    <li v-for="card in inventory">{{ card }}</li>
-                </ul>
-            </div>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-            crossorigin="anonymous"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
