@@ -1,0 +1,22 @@
+- Card
+	- id: number
+	- type: "key" | "chest" | "info" | "malus"
+	- desc: string
+	- title: string
+	- img: string
+	- elements?
+		- card_id: number
+		- coords:
+			- x: number
+			- y: number
+	- code?: string
+	- step?: number
+
+- Inventory
+	- cards: Card[]
+
+- Progress
+	- step: number
+	- inventory: Inventory
+
+localStorage => progress
