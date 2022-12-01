@@ -1,0 +1,9 @@
+git stage . = add all files to staging area
+git commit -m "message" = commit all files in staging area
+git push = push all commits to remote repository
+
+git pull = pull all commits from remote repository
+
+git checkout -b branch-name = create a new branch and switch to it
+git checkout branch-name = switch to an existing branch
+git branch -d branch-name = delete a branch
