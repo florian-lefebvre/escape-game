@@ -1,0 +1,4 @@
+- compteur de points
+- localstorage
+- compte à rebours
+- erreur 404 + perds un point

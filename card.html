@@ -15,6 +15,11 @@
         </script>
     <script src="./scripts/app.js" type="module"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -47,26 +52,30 @@
     </style>
 </head>
 
-<body>
+<body class="bg-gray-900 text-gray-300">
     <div id="app">
-        <h1>Escape game test encore</h1>
-        <p>C'est comme Unlock.</p>
-        <button @click="showInventory = true">Inventory</button>
-        <button @click="inventory.push(data[0])">Add item to inventory</button>
-        <!-- <p>{{ showInventory }}</p> -->
-        <!-- <p>{{ urlParams }}</p>
-        <pre>{{ selectedCard }}</pre> -->   
-        <div class="display-block position-fixed top-0 bottom-0 left-0 right-0 bg-white z-0 overflow-auto" v-show="showInventory">
-            <button @click="showInventory = false">Close</button>
-            <ul class="grid grid-cols-3 gap-1">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="uppercase text-5xl text-center font-bold mt-8">Carte <span class="text-primary-200">{{
+                    urlParams.id }}</span></h1>
+            <div v-if="selectedCard">{{ selectedCard }}</div>
+            <div v-else class="mt-16">
+                <h2 class="uppercase text-3xl md:text-9xl text-center text-primary-200 font-bold">Erreur</h2>
+                <p>Cette carte n'existe pas</p>
+                <p>Attention : tu perds X points</p>
+            </div>
+        </div>
+        <button @click="showInventory = true"
+            class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 bottom-6 shadow">Inventaire</button>
+        <div class="block fixed inset-0 bg-gray-800 z-50 overflow-auto" v-show="showInventory">
+            <button @click="showInventory = false"
+                class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 top-6 shadow">Ferme</button>
+            <h3 class="uppercase text-5xl text-center font-bold my-8 text-white">Inventaire</h3>
+            <ul class="grid grid-cols-3 gap-1 max-w-5xl mx-auto">
                 <li class="bg-gray-200 mx-5 my-5 rounded-lg p-4" v-for="card in inventory">
-
-                    <img class="rounded-lg w-full h-32 object-cover" :src="card.img" alt="">
+                    <img class="rounded-lg w-full h-32 object-cover" :src="card.img" :alt="card.title">
                     <h1 class="text-center mt-2">{{card.title}}</h1>
                     <p class="text-center mt-2">{{card.desc}}</p>
-
                 </li>
-
             </ul>
         </div>
     </div>
