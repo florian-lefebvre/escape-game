@@ -26,6 +26,7 @@ createApp({
     async fetchData() {
       const res = await fetch("./data.json");
       this.data = await res.json();
+      this.inventory = this.data;
     },
   },
 }).mount("#app");
