@@ -59,10 +59,10 @@
         <div class="display-block position-fixed top-0 bottom-0 left-0 right-0 bg-white z-0 overflow-auto" v-show="showInventory">
             <button @click="showInventory = false">Close</button>
             <ul class="grid grid-cols-3 gap-1">
-                <li class="bg-gray-200 mx-5 my-5 rounded-lg p-4" v-for="card in inventory">
+                <li class="bg-primary-200 mx-5 my-5 rounded-lg p-4" v-for="card in inventory">
 
                     <img class="rounded-lg w-full h-32 object-cover" :src="card.img" alt="">
-                    <h1 class="text-center mt-2">{{card.title}}</h1>
+                    <h1 class="text-center mt-2 text-black font-bold">{{card.title}}</h1>
                     <p class="text-center mt-2">{{card.desc}}</p>
 
                 </li>
