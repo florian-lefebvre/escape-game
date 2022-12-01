@@ -15,19 +15,6 @@
         </script>
     <script src="./scripts/app.js" type="module"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .modal {
-            display: block;
-            position: fixed;
-            top: 0;
-            bottom: 0;  
-            left: 0;
-            right: 0;
-            background-color: #fff;
-            z-index: 50;
-            overflow-y: auto;
-        }
-    </style>
 </head>
 
 <body>
@@ -36,10 +23,10 @@
         <p>C'est comme Unlock.</p>
         <button @click="showInventory = true">Inventory</button>
         <button @click="inventory.push(data[0])">Add item to inventory</button>
-        <p>{{ showInventory }}</p>
+        <!-- <p>{{ showInventory }}</p> -->
         <!-- <p>{{ urlParams }}</p>
-        <pre>{{ selectedCard }}</pre> -->
-        <div class="modal" v-show="showInventory">
+        <pre>{{ selectedCard }}</pre> -->   
+        <div class="display-block position-fixed top-0 bottom-0 left-0 right-0 bg-white z-0 overflow-auto" v-show="showInventory">
             <button @click="showInventory = false">Close</button>
             <ul class="grid grid-cols-3 gap-1">
                 <li class="bg-gray-200 mx-5 my-5 rounded-lg p-4" v-for="card in inventory">
