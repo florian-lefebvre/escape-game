@@ -24,19 +24,18 @@
         <p>C'est comme Unlock.</p>
         <p>{{ urlParams }}</p>
         <pre>{{ selectedCard }}</pre>
-        <ul>
+        <div>
+
             <li v-for="card in data">
                 <div class="card">
-                    <h1 class="card-title text-center">{{card.title}}</h1>
-
-                    <img class="card-img-top" :src="card.img" alt="Fabian le Cuck">
-
-                    <p class="card-text text-center">{{card.desc}}
-                    <p>
-                    <p>{{card.elements.card_id}}</p>
+                    <h1 class="card-title text-center">{{selectedCard.title}}</h1>
+                    
+                    <img class="card-img-top" :src="selectedCard.img" alt="Some Images">
+                    
+                    <p class="card-text text-center">{{selectedCard.desc}}</p>
                 </div>
             </li>
-        </ul>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
