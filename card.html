@@ -15,12 +15,42 @@
         </script>
     <script src="./scripts/app.js" type="module"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f3e5ff',
+                            100: '#d6b4fe',
+                            200: '#b984fb',
+                            300: '#9d53f8',
+                            400: '#8123f5',
+                            500: '#680cdc',
+                            600: '#5107ab',
+                            700: '#3a047b',
+                            800: '#23024c',
+                            900: '#0e001d',
+                        }
+                    }
+                },
+                fontFamily: {
+                    sans: ["Prompt", "sans-serif"]
+                }
+            }
+        }
+    </script>
+    <style>
+        #app {
+            display: contents;
+        }
+    </style>
     <style>
         .modal {
             display: block;
             position: fixed;
             top: 0;
-            bottom: 0;  
+            bottom: 0;
             left: 0;
             right: 0;
             background-color: #fff;
@@ -49,7 +79,7 @@
                     <p class="text-center mt-2">{{card.desc}}</p>
 
                 </li>
-                
+
             </ul>
         </div>
     </div>
