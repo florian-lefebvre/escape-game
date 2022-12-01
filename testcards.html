@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Card</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<body>
+    <h1>Escape game test encore</h1>
+    <p>C'est comme Unlock.</p>
+
+    <div x-data="{ open: false }">
+        <button @click="open = !open">Expand</button>
+
+        <span x-show="open">
+            Content...
+        </span>
+    </div>
+
+    <ul x-data="test">
+        <template x-for="card in cards">
+            <div class="card">
+                <h1 class= "card-title text-center" x-text= "card.title" ></h1>
+
+                <img class= "card-img-top" x-bind:src="card.img" alt="Fabian le Cuck">
+
+                <p class="card-text text-center" x-text="card.desc"></p>
+                <p x-text="card.elements.card_id"></p>
+            </div>
+            <li x-text="JSON.stringify(card)"></li>
+        </template>
+    </ul>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('test', () => ({
+                cards: [
+                    {
+                        id: 0,
+                        title: "Test Cards",
+                        desc: "Bonjour, je suis la description",
+                        img: "Psychrolutes marcidus.png",
+                        elements:[ {
+                            card_id:2,
+                            coords:[{
+                                x:3,
+                                y:8,
+                            }],
+                        }
+                        ],
+                        code:"Bonjour je suis le code ?",
+                        step:8,
+                    },
+                    {
+                        id: 1,
+                        title: "Second Truc des cards",
+                        desc: "Bonjour, je suis la description woaaoaoaoaa",
+                        img: "GNE SUI CONTEN.png",
+                        elements:[ {
+                            card_id:2,
+                            coords:[{
+                                x:3,
+                                y:8,
+                            }],
+                        }
+                        ],
+                        code:"Bonjour je suis le code ?",
+                        step:8,
+                    },
+                ]
+            }))
+        })
+    </script>
+
+
+    <pre id="content"></pre>
+
+    <script>
+        async function main() {
+            const res = await fetch("./data.json")
+            const data = await res.json()
+            console.log(data)
+            const params = new URLSearchParams(window.location.search)
+            const id = params.get("id")
+            const card = data.find(e => e.id === id)
+            document.querySelector("#content").innerHTML = JSON.stringify(card, null, 2)
+        }
+
+        main()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
