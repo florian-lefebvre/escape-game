@@ -17,6 +17,11 @@ createApp({
     this.loadStoredData();
     this.fetchData();
   },
+  computed: {
+    selectedCard() {
+      return this.data?.find((e) => e.id == this.urlParams.id);
+    },
+  },
   methods: {
     loadStoredData() {
       const parsed = JSON.parse(localStorage.getItem("inventory"));
