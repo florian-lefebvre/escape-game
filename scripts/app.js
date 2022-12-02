@@ -12,6 +12,7 @@ createApp({
         id: params.get("id"),
       },
       showInventory: false,
+      search: "",
     };
   },
   mounted() {

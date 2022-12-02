@@ -14,7 +14,7 @@
           }
         </script>
     <script src="./scripts/app.js" type="module"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -57,18 +57,35 @@
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="uppercase text-5xl text-center font-bold mt-8">Carte <span class="text-primary-200">{{
                     urlParams.id }}</span></h1>
-            <div v-if="selectedCard">{{ selectedCard }}</div>
+            <div v-if="selectedCard">
+                <img :src="selectedCard.img" class="max-w-2xl mx-auto mt-8" alt="">
+                <div class="uppercase text-5xl text-center font-bold text-white mt-8">{{ selectedCard.title }}</div>
+                <div class="text-lg mt-2">{{ selectedCard.desc }}</div>
+            </div>
             <div v-else class="mt-16">
-                <h2 class="uppercase text-3xl md:text-9xl text-center text-primary-200 font-bold">Erreur</h2>
-                <p>Cette carte n'existe pas</p>
-                <p>Attention : tu perds X points</p>
+                <h2 class="uppercase text-4xl md:text-9xl text-center text-primary-200 font-bold">Erreur</h2>
+                <p class="text-xl mt-12">Cette carte n'existe pas</p>
+                <p class="text-xl"><span class="font-bold">Attention</span> : tu perds 3 points</p>
             </div>
         </div>
-        <button @click="showInventory = true"
-            class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 bottom-6 shadow">Inventaire</button>
+        <div class="fixed z-10 inset-x-0 bottom-0 bg-gray-800 p-4 flex justify-between">
+            <div>
+                <label for="search" class="ml-4">Chercher</label>
+                <form class="flex items-center">
+                    <input type="text" id="search"
+                        class="text-gray-100 focus:outline-none placeholder:text-gray-400 focus:ring-primary-200 bg-gray-500 rounded-l-full"
+                        placeholder="00" v-model="search">
+                    <a :href="`?id=${search === '' ? 0 : search}`"
+                        class="border border-transparent uppercase bg-primary-200 text-lg px-6 py-1.5 rounded-r-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors shadow">Go
+                        !</a>
+                </form>
+            </div>
+            <button @click="showInventory = true"
+                class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors shadow">Inventaire</button>
+        </div>
         <div class="block fixed inset-0 bg-gray-800 z-50 overflow-auto" v-show="showInventory">
             <button @click="showInventory = false"
-                class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 top-6 shadow">Ferme</button>
+                class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 top-6 shadow">Fermer</button>
             <h3 class="uppercase text-5xl text-center font-bold my-8 text-white">Inventaire</h3>
             <ul class="grid grid-cols-3 gap-1 max-w-5xl mx-auto">
                 <li class="bg-gray-200 mx-5 my-5 rounded-lg p-4" v-for="card in inventory">
