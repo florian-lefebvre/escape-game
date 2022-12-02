@@ -43,6 +43,7 @@ createApp({
       },
       showInventory: false,
       search: "",
+      mounted: false,
     };
   },
   async mounted() {
@@ -77,6 +78,7 @@ createApp({
       }, 1000);
     }
     this.watchKonami();
+    this.mounted = true;
   },
   computed: {
     selectedCard() {
