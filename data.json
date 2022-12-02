@@ -7,19 +7,19 @@
   },
   {
     "id": 37,
-    "title": "Objet dans la chambre 1",
-    "desc": "C'est l'objet 1",
+    "title": "Affiche",
+    "desc": "Le vaccin est aussi un moyen efficace pour se protéger de CERTAINES maladies sexuellement transmissibles comme l'Hépatite B ou le Papillomavirus, ce qui n’enlève pas la nécessité de sortir couverts. Le vaccin contre l’Hépatite B est d’ailleurs obligatoire en France pour les bébés depuis le 1er janvier 2018.",
     "img": "./images/GNE SUI CONTEN.png"
   },
   {
     "id": 47,
-    "title": "Objet dans la chambre 2",
+    "title": "Tiroir de la commode",
     "desc": "C'est l'objet 2",
     "img": "./images/GNE SUI CONTEN.png"
   },
   {
     "id": 12,
-    "title": "Objet dans la chambre 3",
+    "title": "Miroir",
     "desc": "C'est l'objet 3",
     "img": "./images/GNE SUI CONTEN.png"
   },
@@ -100,5 +100,6 @@
     "title": "Objet Fin",
     "desc": "C'est l'objet de fin",
     "img": "./images/GNE SUI CONTEN.png"
-  }
+  },
+
 ]
