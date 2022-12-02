@@ -20,7 +20,7 @@
   {
     "id": 12,
     "title": "Miroir",
-    "desc": "Il semblerait que des traces de rouge à lèvre ont été laissées sur le miroir, mais que veulent-elles dire ?",
+    "desc": "Il semblerait que des traces de rouge à lèvre ont été laissées sur le miroir, mais que veulent-elles dire ? (oublie pas que c'est un miroir !)",
     "canceled": []
   },
   {
@@ -69,7 +69,7 @@
     "id": 81,
     "title": "Préservatif masculin",
     "desc": "Attention ! Il a l'air périmé !",
-    "canceled": []
+    "canceled": [64, 17]
   },
   {
     "id": 1967,
@@ -87,13 +87,13 @@
     "id": 11,
     "title": "Livre de Scouts",
     "desc": "Un manuel de scout qui peut vous apprendre un tas de choses sur les nœuds.",
-    "canceled": [17, 47, 99, 64, 1967, 81, 1987]
+    "canceled": [47, 99, 64]
   },
   {
     "id": 36,
     "title": "Drap avec des noeuds",
     "desc": "Oh bien joué ! Mais pourquoi faire ?",
-    "canceled": [11, 25]
+    "canceled": [11, 25, 1987, 1967]
   },
   {
     "id": 106,

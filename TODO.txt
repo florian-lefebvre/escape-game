@@ -8,3 +8,5 @@ x victoire
 x merge contact
 x merge konami + carte 69
 - endgame => tout l'inventaire
+- formulaire : 305
+- loader

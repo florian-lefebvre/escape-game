@@ -11,6 +11,8 @@ function arrayEquals(a, b) {
   );
 }
 
+const DEFAULT_TIME = 45 * 60;
+
 createApp({
   data() {
     return {
@@ -19,7 +21,7 @@ createApp({
       canceled: [],
       score: 100,
       initTimer: false,
-      timer: 1800,
+      timer: DEFAULT_TIME,
       konamiTab: [],
       konami: [
         "ArrowUp",
@@ -54,10 +56,20 @@ createApp({
       this.victory();
     }
     if (this.urlParams.id == 0) {
+      if (!this.initTimer) {
+        this.timer = DEFAULT_TIME;
+      }
       this.initTimer = true;
     }
     if (this.urlParams.id == 69 && !this.urlParams.check) {
       history.back();
+    }
+    if (
+      this.inventory.map((e) => e.id).includes(1967) &&
+      this.inventory.map((e) => e.id).includes(1987) &&
+      !this.inventory.map((e) => e.id).includes(11)
+    ) {
+      window.location.href = "/card.html?id=11";
     }
     if (this.initTimer) {
       setInterval(() => {
@@ -117,13 +129,6 @@ createApp({
         this.inventory.push(this.data.find((e) => e.id == id));
         this.inventory = this.inventory.sort((a, b) => a.id - b.id);
         card = this.inventory.find((e) => e.id == id);
-      }
-      // A VOIR
-      if (
-        this.inventory.map((e) => e.id).includes(1967) &&
-        this.inventory.map((e) => e.id).includes(1987)
-      ) {
-        this.inventory.push(this.data.find((e) => e.id == 11));
       }
       for (const canceledId of card.canceled) {
         this.canceled.push(this.data.find((e) => e.id == canceledId));
