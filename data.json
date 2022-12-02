@@ -131,7 +131,7 @@
   {
     "id": 204,
     "title": "Audio",
-    "desc": "TEMPORAIRE",
+    "desc": "Bienvenue dans notre sex-Shop, nous avons à disposition des menottes pour des parties de jambes en l'air endiablés. Dans le même domaine, nous disposons de fouet dans les emballages en carton présent près du comptoir à coté des flacons de poppers. Pour les plaisirs solitaires, nous vous proposons une large sélection de DVDS. Chaque semaine, de nouveaux produits sont à l'affiche comme en ce moment de la lingerie, pour 3 tenues achetés, le string en dentelle est offert. ",
     "canceled": []
   },
   {
@@ -192,5 +192,10 @@
     "title": "Digicode",
     "desc": "Le Digicode permet de rentrer dans le Sex-shop. Il faudrait que les étoiles soient alignées pour le trouver...",
     "canceled": []
+  },
+  {
+    "id": 142857,
+    "desc": "Félicitation vous avez réussi l'Escape game ! N'oubliez pas de sortir couvert !",
+    "canceled":[]
   }
 ]
