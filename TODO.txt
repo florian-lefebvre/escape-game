@@ -16,3 +16,5 @@ x json
 x new image 12
 - test final
 - record video konami
+- favicon
+- title
