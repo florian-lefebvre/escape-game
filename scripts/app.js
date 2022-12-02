@@ -40,9 +40,11 @@ createApp({
         id: params.get("id"),
         status: params.get("status"),
         check: params.get("check"),
+        answer: params.get("answer"),
       },
       showInventory: false,
       search: "",
+      answer: "",
       mounted: false,
     };
   },
@@ -64,6 +66,12 @@ createApp({
     }
     if (this.urlParams.id == 69 && !this.urlParams.check) {
       history.back();
+    }
+    if (
+      this.urlParams.id == 305 &&
+      this.urlParams.answer?.toLowerCase() === "plaisir"
+    ) {
+      window.location.href = "/card.html?id=306";
     }
     if (
       this.inventory.map((e) => e.id).includes(1967) &&

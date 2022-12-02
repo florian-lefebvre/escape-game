@@ -146,13 +146,13 @@
   {
     "id": 305,
     "title": "Vendeur",
-    "desc": "Bonjour cher(e) client(e), j'ai une question pour vous : Qu'est ce qui est important dans le sexe ? Si vous ne savez pas, sortez du sex-shop et trouvez votre voix !",
+    "desc": "Bonjour cher(e) client(e), j'ai une question pour vous : Qu'est ce qui est important dans le sexe ? Si vous ne savez pas, sortez du sex-shop et trouvez votre voix ! Renseigne ta réponse dans le champ",
     "canceled": []
   },
   {
     "id": 306,
     "title": "Indice du Vendeur",
-    "desc": "'l'alphabet de signes'. Bien joué, le mot était bien PLAISIR.",
+    "desc": "'l'alphabet de signes'. Bien joué, le mot était bien PLAISIR. Le miroir pourrait être utile...",
     "canceled": [220, 202, 106, 299, 300, 204, 301, 302, 304, 305]
   },
   {

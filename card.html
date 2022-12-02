@@ -86,6 +86,19 @@
                     <div class="lg:text-left">
                         <div class="uppercase text-5xl font-bold text-white mt-8">{{ selectedCard.title }}</div>
                         <div class="text-lg mt-2 prose prose-invert" v-html="parseMarkdown(selectedCard.desc)"></div>
+                        <div v-if="urlParams.id == 305 && urlParams.answer?.toLowerCase() !== 'plaisir'"
+                            class="bg-red-500 text-white mt-4 p-2 rounded-lg">
+                            Mauvaise réponse, réeassaye !</div>
+                        <div v-if="urlParams.id == 305" class="mt-4">
+                            <label for="answer" class="ml-4">Réponse</label>
+                            <div class="flex items-center">
+                                <input type="text" id="answer"
+                                    class="text-gray-100 focus:outline-none placeholder:text-gray-400 focus:ring-primary-200 bg-gray-500 rounded-l-full"
+                                    placeholder="???" v-model="answer">
+                                <a :href="`?id=${selectedCard.id}&answer=${answer}`"
+                                    class="border border-transparent uppercase bg-primary-200 text-lg px-6 py-1.5 rounded-r-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors shadow">Vérifier</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div v-else class="mt-16">
