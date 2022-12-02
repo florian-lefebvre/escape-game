@@ -1,5 +1,0 @@
-class Inventory{
-    constructor (cards){
-        this.cards = cards;
-    }
-}
