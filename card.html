@@ -89,11 +89,11 @@
             <button @click="showInventory = false"
                 class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 top-6 shadow">Fermer</button>
             <h3 class="uppercase text-5xl text-center font-bold my-8 text-white">Inventaire</h3>
-            <ul class="grid grid-cols-3 gap-1 max-w-5xl mx-auto">
-                <li class="bg-gray-200 mx-5 my-5 rounded-lg p-4" v-for="card in inventory">
-                    <img class="rounded-lg w-full h-32 object-cover" :src="card.img" :alt="card.title">
-                    <h1 class="text-center mt-2 text-black">{{card.title}}</h1>
-                    <p class="text-center mt-2 text-black">{{card.desc}}</p>
+            <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-1 max-w-5xl mx-auto">
+                <li class="bg-gray-700 mx-5 my-5 rounded-lg p-4 text-gray-300" v-for="card in inventory">
+                    <img class="rounded-lg w-full" :src="card.img" :alt="card.title">
+                    <h1 class="mt-2 font-semibold text-lg mb-2">{{card.title}}</h1>
+                    <p class="tmt-2">{{card.desc}}</p>
                 </li>
             </ul>
         </div>

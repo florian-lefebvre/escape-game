@@ -2,3 +2,4 @@
 - localstorage
 - compte à rebours
 - erreur 404 + perds un point
+- si déjà visité et discard => t'as déjà tout vu
