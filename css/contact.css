@@ -1,0 +1,183 @@
+body {
+    background: linear-gradient(90deg, rgba(176, 116, 250, 1) 0%, rgba(229, 196, 255, 1) 100%);
+    margin: 0
+}
+
+#conteneur{
+    display: none;
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+}
+
+#bienessaye{
+    display: none;
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    padding: 10px;
+    color: #e3e3e3;
+    background: #262626;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(40vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    color: #e3e3e3;
+    width: 340px;
+    height: 515px;
+    background: #262626;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #000;
+    margin: calc(40vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    position: relative
+}
+
+
+
+h2 {
+    margin: auto;
+    padding-bottom: 10px;
+    width: 130px;
+    color: #e3e3e3;
+    border-bottom: 3px solid #e3e3e3
+}
+
+h2:hover {
+    border-bottom: 3px solid #ab7798
+}
+
+input {
+    color: #e3e3e3;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all .3s;
+    border-bottom: 2px solid #bfaab7
+}
+
+input:focus {
+    border-bottom: 2px solid #b785a4
+}
+
+p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #e3e3e3
+}
+
+.lebouton {
+    text-decoration: none;
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    background: 0;
+    color: #e3e3e3;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.lebouton:hover {
+    background: #78788c;
+    color: #fff
+}
+
+.bouton {
+    text-decoration: none;
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    background: 0;
+    color: #e3e3e3;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.bouton:hover {
+    background: #78788c;
+    color: #fff
+}
+
+span {
+    margin: 0 5px 0 15px
+}
+
+.form input:invalid {
+
+    border: 1px solid red;
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97);
+    transform: translate3d(0, 0, 0)
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.form span {
+
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.form input:invalid~span {
+
+    display: flex;
+    color: red;
+    transition: .4s opacity linear;
+}
+
+.form input:invalid~span {
+
+    visibility: visible;
+    opacity: 1;
+}

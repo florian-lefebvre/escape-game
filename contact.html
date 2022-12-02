@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/contact.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="conteneur">
+        <div class="popup">
+            <p>Message bien envoyé</p>
+            <button class="bouton">On recommence ?</button>
+        </div>
+    </div>
+
+    <div id="bienessaye">
+        <div class="popup">
+            <p>Bien tenté crevure !</p>
+            <button class="bouton">On recommence ?</button>
+        </div>
+    </div>
+
+    <form class="form">
+        <div class="titre">
+            <h2>CONTACT</h2>
+        </div>
+        <p type="Nom :"><input id="nom" pattern="^[( )a-zA-Z]+$" placeholder="Entrez le nom ici.."></input>
+            <span>C'est non</span>
+        </p>
+        <p type="Prenom :"><input id="prenom" pattern="^[( )a-zA-Z]+$" placeholder="Entrez le nom ici.."></input>
+            <span>C'est aussi non</span>
+        </p>
+        <p type="Email :"><input id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                placeholder="Votre mail ici.."></input>
+            <span>peut-être que ... Et non toujours pas</span>
+        </p>
+        <p type="Message :"><input placeholder="Qu'avez vous a nous dire ?"></input></p>
+        <a class="lebouton" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Envoyer</a>
+    </form>
+</body>
+<script src="./scripts/contact.js"></script>
+
+</html>
