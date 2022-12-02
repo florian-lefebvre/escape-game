@@ -8,7 +8,7 @@ x victoire
 x merge contact
 x merge konami + carte 69
 x loader
-- mettre en valeur les lettres
-- formulaire : 305
-- endgame => tout l'inventaire
+x mettre en valeur les lettres
+x formulaire : 305
+x endgame => tout l'inventaire
 - site poubelle

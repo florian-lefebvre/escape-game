@@ -55,7 +55,7 @@
             color: #9d53f8 !important;
         }
     </style>
-    <script>
+    <script defer>
             (function (d, t) {
                 var BASE_URL = "https://app.chatwoot.com";
                 var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
@@ -141,7 +141,7 @@
                         <a :href="`?id=${card.id}`"
                             class="bg-gray-700 mx-5 my-5 rounded-lg p-4 text-gray-300 hover:scale-105 transition-transform"
                             v-for="card in inventory">
-                            <img v-if="![1987, 1967].includes(card.id)" class="rounded-lg w-full mb-2"
+                            <img v-if="![1987, 1967, 142857].includes(card.id)" class="rounded-lg w-full mb-2"
                                 :src="`./images/${card.id}.png`" :alt="card.title">
                             <h1 class="font-semibold text-lg">#{{card.id}} {{card.title}}</h1>
                         </a>

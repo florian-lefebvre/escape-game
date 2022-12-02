@@ -50,7 +50,7 @@
       display: contents;
     }
   </style>
-  <script>
+  <script defer>
       (function (d, t) {
         var BASE_URL = "https://app.chatwoot.com";
         var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
@@ -85,6 +85,25 @@
         <a href="/index.html"
           class="uppercase bg-primary-200 text-2xl px-8 py-3 rounded-full text-white font-semibold inline-block mt-8 hover:bg-primary-300 transition-colors shadow">Accueil</a>
       </div>
+    </div>
+    <button @click="showInventory = true"
+      class="fixed z-10 top-24 sm:top-6 left-6 inline-block transition-transform hover:scale-105"><img
+        src="./images/bag.png" class="w-28" alt=""></button>
+    <div class="block fixed inset-0 bg-gray-800 z-50 overflow-auto" v-show="showInventory">
+      <button @click="showInventory = false"
+        class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 top-6 shadow">Fermer</button>
+      <h3 class="uppercase text-5xl text-center font-bold my-8 text-white">Inventaire</h3>
+      <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-1 max-w-5xl mx-auto">
+        <li class="contents">
+          <a :href="`?id=${card.id}`"
+            class="bg-gray-700 mx-5 my-5 rounded-lg p-4 text-gray-300 hover:scale-105 transition-transform"
+            v-for="card in inventory">
+            <img v-if="![1987, 1967, 142857].includes(card.id)" class="rounded-lg w-full mb-2"
+              :src="`./images/${card.id}.png`" :alt="card.title">
+            <h1 class="font-semibold text-lg">#{{card.id}} {{card.title}}</h1>
+          </a>
+        </li>
+      </ul>
     </div>
     <footer class="mt-32 bg-gray-700 text-gray-400">
       <div class="max-w-7xl mx-auto px-4 py-2 text-center">Copyright &copy; MuM Inc.</div>

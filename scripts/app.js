@@ -61,6 +61,8 @@ createApp({
     if (this.urlParams.id == 0) {
       if (!this.initTimer) {
         this.timer = DEFAULT_TIME;
+        this.inventory = [this.data[0]];
+        localStorage.removeItem("inventory");
       }
       this.initTimer = true;
     }
@@ -164,7 +166,6 @@ createApp({
       return converter.makeHtml(str);
     },
     reset() {
-      localStorage.removeItem("inventory");
       localStorage.removeItem("canceled");
       localStorage.removeItem("score");
       localStorage.removeItem("timer");
@@ -176,6 +177,7 @@ createApp({
     },
     victory() {
       this.reset();
+      this.inventory = this.data;
       window.location.href = "/result.html?status=victory";
     },
     konamiCode(e) {
