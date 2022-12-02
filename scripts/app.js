@@ -9,8 +9,11 @@ createApp({
       inventory: [],
       canceled: [],
       score: 100,
+      initTimer: false,
+      timer: 1800,
       urlParams: {
         id: params.get("id"),
+        status: params.get("status"),
       },
       showInventory: false,
       search: "",
@@ -18,10 +21,19 @@ createApp({
   },
   async mounted() {
     await this.fetchData();
+    this.load();
     if (this.urlParams.id && this.data.find((e) => e.id == this.urlParams.id)) {
       this.manageInventory(this.urlParams.id);
     }
     this.decreaseScore();
+    if (this.urlParams.id == 0) {
+      this.initTimer = true;
+    }
+    if (this.initTimer) {
+      setInterval(() => {
+        this.timer--;
+      }, 1000);
+    }
   },
   computed: {
     selectedCard() {
@@ -30,12 +42,17 @@ createApp({
     isSelectedCardCanceled() {
       return this.canceled.find((e) => e.id == this.urlParams.id) !== undefined;
     },
+    cleanTimer() {
+      const time = this.timer / 60;
+      const minutes = parseInt(time);
+      const secondes = Math.round((time - minutes) * 60);
+      return minutes + ":" + secondes;
+    },
   },
   methods: {
     async fetchData() {
       const res = await fetch("./data.json");
       this.data = (await res.json()).sort((a, b) => a.id - b.id);
-      this.load();
     },
     load() {
       const storedInventory = localStorage.getItem("inventory");
@@ -51,6 +68,14 @@ createApp({
       const storedScore = localStorage.getItem("score");
       if (storedScore) {
         this.score = JSON.parse(storedScore);
+      }
+      const storedTimer = localStorage.getItem("timer");
+      if (storedTimer) {
+        this.timer = JSON.parse(storedTimer);
+      }
+      const storedInitTimer = localStorage.getItem("init-timer");
+      if (storedInitTimer) {
+        this.initTimer = JSON.parse(storedInitTimer);
       }
     },
     manageInventory(id) {
@@ -85,6 +110,14 @@ createApp({
       }, 50);
       return converter.makeHtml(str);
     },
+    defeat() {
+      localStorage.removeItem("inventory");
+      localStorage.removeItem("canceled");
+      localStorage.removeItem("score");
+      localStorage.removeItem("timer");
+      localStorage.removeItem("init-timer");
+      window.location.href = "/result.html?status=defeat";
+    },
   },
   watch: {
     inventory: {
@@ -101,6 +134,18 @@ createApp({
     },
     score(n, o) {
       localStorage.setItem("score", n);
+      if (n <= 0) {
+        this.defeat();
+      }
+    },
+    timer(n, o) {
+      localStorage.setItem("timer", n);
+      if (n <= 0) {
+        this.defeat();
+      }
+    },
+    initTimer(n, o) {
+      localStorage.setItem("init-timer", n);
     },
   },
 }).mount("#app");

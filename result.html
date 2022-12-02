@@ -75,32 +75,15 @@
         <a href="/contact.html"
           class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 top-6 shadow">Contact</a>
         <img src="./images/sexit.svg" alt="Logo" class="mt-12 w-96 mx-auto">
-        <h1 class="uppercase text-5xl text-center font-bold mt-16">Escape <span class="text-primary-200">game</span>
+        <h1 class="uppercase text-5xl text-center font-bold mt-16">
+          {{ urlParams.status === "defeat" ?"Défaite !" : "Bien joué !"}}
         </h1>
         <div class="bg-gray-50 text-gray-800 rounded-lg py-6 px-6 md:px-12 max-w-xl mx-auto mt-12 text-left">
-          <span class="font-bold">MuM Inc.</span> vous propose dans le cadre de la <a href="https://www.nuitdelinfo.com"
-            target="_blank" class="text-primary-400 underline hover:text-primary-300 transition-colors">Nuit de
-            l'Info</a>, un escape
-          game pour vous sensibiliser aux
-          problématiques liées à la santé sexuelle d'une façon plus amusante, ludique et sans tabou. Le but est de vous
-          aider à
-          devenir acteur de votre santé sexuelle et de contribuer à la lutte contre les préjugés et les IST.
+          {{ urlParams.status === "defeat" ?"Bien tenté..." : "Trop fort !"}}
+
         </div>
-        <div class="bg-gray-50 text-gray-800 rounded-lg py-6 px-6 md:px-12 max-w-xl mx-auto mt-12 text-left">
-          La règle du jeu est toute simple, réussir à sortir de l'escape game ! Vous aurez à votre disposition des
-          indices ou des
-          objets à combiner entre eux. Pour combiner les objets, il suffira d'additionner le numéro de chacune des
-          cartes voulues
-          et d'inscrire le résultat dans le champ bas de page (ex : si on souhaite combiner la carte numéro 3 et la
-          carte numéro 4
-          il faut inscrire dans le champ de formulaire 7). De même, si un numéro est visible sur la carte, il suffira de
-          le
-          rentrer dans le champ pour découvrir un nouvel indice. Si les règles vous semblent claires et que vous êtes
-          prêt pour
-          l'aventure, cliquez sur jouer !
-        </div>
-        <a href="/card.html?id=0"
-          class="uppercase bg-primary-200 text-2xl px-8 py-3 rounded-full text-white font-semibold inline-block mt-8 hover:bg-primary-300 transition-colors shadow">Jouer</a>
+        <a href="/index.html"
+          class="uppercase bg-primary-200 text-2xl px-8 py-3 rounded-full text-white font-semibold inline-block mt-8 hover:bg-primary-300 transition-colors shadow">Accueil</a>
       </div>
     </div>
     <footer class="mt-32 bg-gray-700 text-gray-400">

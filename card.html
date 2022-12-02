@@ -108,9 +108,10 @@
                         !</a>
                 </div>
             </div>
-            <div class="fixed z-10 top-24 sm:top-6 left-6 inline-block transition-transform hover:scale-105">Score: {{
-                score
-                }}</div>
+            <div class="fixed z-10 top-24 sm:top-6 left-6 inline-block transition-transform hover:scale-105">
+                <div>Score: {{score}}</div>
+                <div>Timer: {{cleanTimer}}</div>
+            </div>
             <button @click="showInventory = true"
                 class="fixed z-10 top-24 sm:top-6 right-6 inline-block transition-transform hover:scale-105"><img
                     src="./images/bag.png" class="w-28" alt=""></button>
