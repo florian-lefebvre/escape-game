@@ -79,8 +79,8 @@
             <h1 class="uppercase text-5xl text-center font-bold mt-8">Carte <span class="text-primary-200">{{
                     urlParams.id }}</span></h1>
             <div v-if="selectedCard && !isSelectedCardCanceled" class="flex flex-col lg:flex-row gap-6 px-4 flex-start">
-                <img :src="`./images/${selectedCard.id}.png`" class="w-full max-w-2xl mx-auto mt-8 object-contain"
-                    alt="">
+                <img v-if="![1987, 1967].includes(selectedCard.id)" :src="`./images/${selectedCard.id}.png`"
+                    class="w-full max-w-2xl mx-auto mt-8 object-contain" alt="">
                 <div class="lg:text-left">
                     <div class="uppercase text-5xl font-bold text-white mt-8">{{ selectedCard.title }}</div>
                     <div class="text-lg mt-2 prose prose-invert" v-html="parseMarkdown(selectedCard.desc)"></div>
@@ -96,7 +96,7 @@
                     points</p>
             </div>
         </div>
-        <div class="sticky lg:fixed z-10 inset-x-0 bottom-0 bg-gray-800 p-4 flex justify-between mt-10">
+        <div class="sticky lg:fixed z-10 inset-x-0 bottom-0 bg-gray-800/60 p-4 flex justify-between mt-10">
             <div>
                 <label for="search" class="ml-4">Chercher</label>
                 <div class="flex items-center">
@@ -108,9 +108,9 @@
                         !</a>
                 </div>
             </div>
-            <button @click="showInventory = true"
-                class="fixed z-10 top-24 sm:top-6 left-6 inline-block transition-transform hover:scale-105">{{ score
-                }}</button>
+            <div class="fixed z-10 top-24 sm:top-6 left-6 inline-block transition-transform hover:scale-105">Score: {{
+                score
+                }}</div>
             <button @click="showInventory = true"
                 class="fixed z-10 top-24 sm:top-6 right-6 inline-block transition-transform hover:scale-105"><img
                     src="./images/bag.png" class="w-28" alt=""></button>

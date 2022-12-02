@@ -1,7 +1,8 @@
 x compteur de points
 X localstorage
-- compte à rebours
 x erreur 404 + perds un point
 X si déjà visité et discard => t'as déjà tout vus
-- endgame => tout l'inventaire
+- compte à rebours
 - victoire
+- carte 69
+- endgame => tout l'inventaire
