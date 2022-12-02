@@ -5,6 +5,6 @@ X si déjà visité et discard => t'as déjà tout vus
 x compte à rebours
 x défaire : score 0 ou timer 0
 - victoire
-- merge contact
+x merge contact
 - merge konami + carte 69
 - endgame => tout l'inventaire

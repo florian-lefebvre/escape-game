@@ -26,6 +26,9 @@ createApp({
       this.manageInventory(this.urlParams.id);
     }
     this.decreaseScore();
+    if (this.urlParams.id == 142857) {
+      this.victory();
+    }
     if (this.urlParams.id == 0) {
       this.initTimer = true;
     }
@@ -110,13 +113,20 @@ createApp({
       }, 50);
       return converter.makeHtml(str);
     },
-    defeat() {
+    reset() {
       localStorage.removeItem("inventory");
       localStorage.removeItem("canceled");
       localStorage.removeItem("score");
       localStorage.removeItem("timer");
       localStorage.removeItem("init-timer");
+    },
+    defeat() {
+      this.reset();
       window.location.href = "/result.html?status=defeat";
+    },
+    victory() {
+      this.reset();
+      window.location.href = "/result.html?status=victory";
     },
   },
   watch: {
