@@ -57,10 +57,12 @@
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="uppercase text-5xl text-center font-bold mt-8">Carte <span class="text-primary-200">{{
                     urlParams.id }}</span></h1>
-            <div v-if="selectedCard">
-                <img :src="selectedCard.img" class="max-w-2xl mx-auto mt-8" alt="">
-                <div class="uppercase text-5xl text-center font-bold text-white mt-8">{{ selectedCard.title }}</div>
-                <div class="text-lg mt-2">{{ selectedCard.desc }}</div>
+            <div v-if="selectedCard" class="flex flex-col lg:flex-row gap-6 px-4">
+                <img :src="selectedCard.img" class="w-full max-w-2xl mx-auto mt-8" alt="">
+                <div class="lg:text-left">
+                    <div class="uppercase text-5xl font-bold text-white mt-8">{{ selectedCard.title }}</div>
+                    <div class="text-lg mt-2">{{ selectedCard.desc }}</div>
+                </div>
             </div>
             <div v-else class="mt-16">
                 <h2 class="uppercase text-4xl md:text-9xl text-center text-primary-200 font-bold">Erreur</h2>
@@ -68,7 +70,7 @@
                 <p class="text-xl"><span class="font-bold">Attention</span> : tu perds 3 points</p>
             </div>
         </div>
-        <div class="fixed z-10 inset-x-0 bottom-0 bg-gray-800 p-4 flex justify-between">
+        <div class="sticky lg:fixed z-10 inset-x-0 bottom-0 bg-gray-800 p-4 flex justify-between">
             <div>
                 <label for="search" class="ml-4">Chercher</label>
                 <form class="flex items-center">
@@ -81,7 +83,7 @@
                 </form>
             </div>
             <button @click="showInventory = true"
-                class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors shadow">Inventaire</button>
+                class="fixed z-10 top-24 sm:top-6 right-6 uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors shadow">Inventaire</button>
         </div>
         <div class="block fixed inset-0 bg-gray-800 z-50 overflow-auto" v-show="showInventory">
             <button @click="showInventory = false"
