@@ -57,8 +57,9 @@
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="uppercase text-5xl text-center font-bold mt-8">Carte <span class="text-primary-200">{{
                     urlParams.id }}</span></h1>
-            <div v-if="selectedCard" class="flex flex-col lg:flex-row gap-6 px-4">
-                <img :src="selectedCard.img" class="w-full max-w-2xl mx-auto mt-8" alt="">
+            <div v-if="selectedCard" class="flex flex-col lg:flex-row gap-6 px-4 flex-start">
+                <img :src="`./images/${selectedCard.id}.png`" class="w-full max-w-2xl mx-auto mt-8 object-contain"
+                    alt="">
                 <div class="lg:text-left">
                     <div class="uppercase text-5xl font-bold text-white mt-8">{{ selectedCard.title }}</div>
                     <div class="text-lg mt-2">{{ selectedCard.desc }}</div>
@@ -70,7 +71,7 @@
                 <p class="text-xl"><span class="font-bold">Attention</span> : tu perds 3 points</p>
             </div>
         </div>
-        <div class="sticky lg:fixed z-10 inset-x-0 bottom-0 bg-gray-800 p-4 flex justify-between">
+        <div class="sticky lg:fixed z-10 inset-x-0 bottom-0 bg-gray-800 p-4 flex justify-between mt-10">
             <div>
                 <label for="search" class="ml-4">Chercher</label>
                 <form class="flex items-center">
@@ -83,17 +84,21 @@
                 </form>
             </div>
             <button @click="showInventory = true"
-                class="fixed z-10 top-24 sm:top-6 right-6 uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors shadow">Inventaire</button>
+                class="fixed z-10 top-24 sm:top-6 right-6 inline-block transition-transform hover:scale-105"><img
+                    src="./images/bag.png" class="w-28" alt=""></button>
         </div>
         <div class="block fixed inset-0 bg-gray-800 z-50 overflow-auto" v-show="showInventory">
             <button @click="showInventory = false"
                 class="uppercase bg-primary-200 text-lg px-6 py-2 rounded-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors fixed z-10 right-6 top-6 shadow">Fermer</button>
             <h3 class="uppercase text-5xl text-center font-bold my-8 text-white">Inventaire</h3>
             <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-1 max-w-5xl mx-auto">
-                <li class="bg-gray-700 mx-5 my-5 rounded-lg p-4 text-gray-300" v-for="card in inventory">
-                    <img class="rounded-lg w-full" :src="card.img" :alt="card.title">
-                    <h1 class="mt-2 font-semibold text-lg mb-2">{{card.title}}</h1>
-                    <p class="tmt-2">{{card.desc}}</p>
+                <li class="contents">
+                    <a :href="`?id=${card.id}`"
+                        class="bg-gray-700 mx-5 my-5 rounded-lg p-4 text-gray-300 hover:scale-105 transition-transform"
+                        v-for="card in inventory">
+                        <img class="rounded-lg w-full" :src="`./images/${card.id}.png`" :alt="card.title">
+                        <h1 class="mt-2 font-semibold text-lg">#{{card.id}} {{card.title}}</h1>
+                    </a>
                 </li>
             </ul>
         </div>
