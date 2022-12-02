@@ -14,7 +14,7 @@ x endgame => tout l'inventaire
 x site poubelle
 x json
 x new image 12
-- test final
+x test final
+x favicon
+x title
 - record video konami
-- favicon
-- title
