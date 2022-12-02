@@ -125,8 +125,9 @@
                     <a :href="`?id=${card.id}`"
                         class="bg-gray-700 mx-5 my-5 rounded-lg p-4 text-gray-300 hover:scale-105 transition-transform"
                         v-for="card in inventory">
-                        <img class="rounded-lg w-full" :src="`./images/${card.id}.png`" :alt="card.title">
-                        <h1 class="mt-2 font-semibold text-lg">#{{card.id}} {{card.title}}</h1>
+                        <img v-if="![1987, 1967].includes(card.id)" class="rounded-lg w-full mb-2"
+                            :src="`./images/${card.id}.png`" :alt="card.title">
+                        <h1 class="font-semibold text-lg">#{{card.id}} {{card.title}}</h1>
                     </a>
                 </li>
             </ul>

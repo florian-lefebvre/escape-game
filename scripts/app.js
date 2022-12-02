@@ -118,6 +118,13 @@ createApp({
         this.inventory = this.inventory.sort((a, b) => a.id - b.id);
         card = this.inventory.find((e) => e.id == id);
       }
+      // A VOIR
+      if (
+        this.inventory.map((e) => e.id).includes(1967) &&
+        this.inventory.map((e) => e.id).includes(1987)
+      ) {
+        this.inventory.push(this.data.find((e) => e.id == 11));
+      }
       for (const canceledId of card.canceled) {
         this.canceled.push(this.data.find((e) => e.id == canceledId));
         const el = this.inventory?.find((e) => e.id == canceledId);
