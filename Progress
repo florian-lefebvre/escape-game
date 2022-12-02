@@ -1,7 +1,0 @@
-class Progress{
-    constructor (step){
-        this.step = step;
-    }
-}
-
-
