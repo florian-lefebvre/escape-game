@@ -197,5 +197,15 @@
     "id": 142857,
     "desc": "Félicitation vous avez réussi l'Escape game ! N'oubliez pas de sortir couvert !",
     "canceled":[]
+  },
+  {
+    "id":69,
+    "desc": "Petit coquinou, tu as trouvé le seul accès à la carte secrète !",
+    "canceled":[]
+  },
+  {
+    "id":18,
+    "desc":"C'est un beau ciel étoilé. Les étoiles semblent former un chiffre...",
+    "canceled":[]
   }
 ]
