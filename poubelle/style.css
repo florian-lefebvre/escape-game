@@ -1,0 +1,91 @@
+body {
+    padding: 0%;
+    margin: 0%;
+    background-color: blueviolet;
+    cursor: none !important;
+}
+html{
+    text-decoration: underline 10px black;
+    font-family: 'bradleys';
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    flex-direction: column;
+}
+
+#display{
+    display: flex;
+}
+
+#logomoche{
+    width: 100%;
+}
+
+
+.ah {
+    width: 50%;
+}
+
+
+.bg {
+    height: 20%;
+    width: 500%;
+}
+
+.log {
+    width: 100%;
+    height: auto;
+
+}
+
+form {
+    border: 1px black solid;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.cursor {
+    width: auto;
+    height: 100px;
+    background-image: url(img/Chat.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.WOO:hover {
+    display: none;
+    pointer-events: none;
+}
+
+.refreshe{
+    border: 1px black solid;
+    background-color: white;
+    padding: 0px 6px;
+}
+
+@font-face {
+    font-family: 'bradleys';
+    src: url('font/bradleys_pen-webfont.woff2') format('woff2'),
+         url('font/bradleys_pen-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+#pub{
+    text-decoration: underline white;
+}
+
+iframe{
+    pointer-events:none;
+}
+
+#widhtstp{
+    width: 70%;
+    margin: auto;
+}

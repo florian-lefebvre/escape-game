@@ -20,13 +20,13 @@
   {
     "id": 12,
     "title": "Miroir",
-    "desc": "Il semblerait que des traces de rouge à lèvre ont été laissées sur le miroir, mais que veulent-elles dire ? (oublie pas que c'est un miroir !)",
+    "desc": "Il semblerait que des traces de rouge à lèvre ont été laissées sur le miroir, mais que veulent-elles dire, vous le saurais à la in du jeu ? (oublie pas que c'est un miroir !)",
     "canceled": []
   },
   {
     "id": 23,
     "title": "Ordinateur portable",
-    "desc": "'???????????' Regarde bien sur ton ordinateur, tu trouveras un lien !",
+    "desc": "'???????????' Regarde bien sur ton miroir, tu trouveras quel lien mettre dans une autre fenêtre (remplace les '?' par le code) !",
     "canceled": []
   },
   {
@@ -174,7 +174,7 @@
   },
   {
     "id": 69,
-    "desc": "Petit coquinou, tu as trouvé le seul accès à la carte secrète !",
+    "desc": "Petit coquinou, tu as trouvé le seul accès à la carte secrète ! Dans [cet enfer](/poubelle) se trouve la réponse à toutes vos questions.",
     "canceled": []
   },
   {
