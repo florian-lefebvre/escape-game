@@ -104,7 +104,7 @@
   {
     "id": 299,
     "title": "Affiche gender Licorne",
-    "desc": "image de la Gender Unicorn (le 'i' est mis en valeur)",
+    "desc": "**I**mage de la Gender Unicorn",
     "canceled": []
   },
   {
@@ -146,7 +146,7 @@
   {
     "id": 305,
     "title": "Vendeur",
-    "desc": "Bonjour cher(e) client(e), j'ai une question pour vous : Qu'est ce qui est important dans le sexe ? Si vous ne savez pas, sortez du sex-shop et trouvez votre voix ! Renseigne ta réponse dans le champ",
+    "desc": "Bonjour cher(e) client(e), j'ai une question pour vous : Qu'est ce qui est important dans le sexe ? Si vous ne savez pas, sortez du sex-shop, tendez l'oreille et trouvez votre voie ! Renseigne ta réponse dans le champ",
     "canceled": []
   },
   {

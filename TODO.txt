@@ -12,3 +12,7 @@ x mettre en valeur les lettres
 x formulaire : 305
 x endgame => tout l'inventaire
 - site poubelle
+x json
+- new image 12
+- test final
+- record video konami
