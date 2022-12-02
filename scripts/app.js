@@ -2,6 +2,15 @@ import { createApp } from "vue";
 
 const params = new URLSearchParams(window.location.search);
 
+function arrayEquals(a, b) {
+  return (
+    Array.isArray(a) &&
+    Array.isArray(b) &&
+    a.length === b.length &&
+    a.every((val, index) => val === b[index])
+  );
+}
+
 createApp({
   data() {
     return {
@@ -11,9 +20,24 @@ createApp({
       score: 100,
       initTimer: false,
       timer: 1800,
+      konamiTab: [],
+      konami: [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "KeyB",
+        "KeyQ",
+      ],
+      konamiTest: 0,
       urlParams: {
         id: params.get("id"),
         status: params.get("status"),
+        check: params.get("check"),
       },
       showInventory: false,
       search: "",
@@ -32,11 +56,15 @@ createApp({
     if (this.urlParams.id == 0) {
       this.initTimer = true;
     }
+    if (this.urlParams.id == 69 && !this.urlParams.check) {
+      history.back();
+    }
     if (this.initTimer) {
       setInterval(() => {
         this.timer--;
       }, 1000);
     }
+    this.watchKonami();
   },
   computed: {
     selectedCard() {
@@ -127,6 +155,28 @@ createApp({
     victory() {
       this.reset();
       window.location.href = "/result.html?status=victory";
+    },
+    konamiCode(e) {
+      this.konamiTab.push(e.code);
+      const verif = arrayEquals(this.konami, this.konamiTab);
+      if (verif) {
+        window.location.href = "/card.html?id=69&check=true";
+      }
+    },
+    watchKonami() {
+      window.addEventListener("keydown", (e) => {
+        if (e.code == "ArrowUp" || this.konamiTest > 0) {
+          window.addEventListener("keydown", this.konamiCode(e));
+          this.konamiTest++;
+        }
+        if (
+          this.konamiTab[this.konamiTest - 1] !=
+          this.konami[this.konamiTest - 1]
+        ) {
+          this.konamiTab = [];
+          this.konamiTest = 0;
+        }
+      });
     },
   },
   watch: {

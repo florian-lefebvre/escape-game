@@ -4,7 +4,7 @@ x erreur 404 + perds un point
 X si déjà visité et discard => t'as déjà tout vus
 x compte à rebours
 x défaire : score 0 ou timer 0
-- victoire
+x victoire
 x merge contact
-- merge konami + carte 69
+x merge konami + carte 69
 - endgame => tout l'inventaire
