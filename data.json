@@ -20,7 +20,7 @@
   {
     "id": 12,
     "title": "Miroir",
-    "desc": "Il semblerait que des traces de rouges à lèvres ont été laissés sur le miroir mais que veulent-elles dire ?",
+    "desc": "Il semblerait que des traces de rouges à lèvres ont été laissées sur le miroir mais que veulent-elles dire ?",
     "canceled": []
   },
   {
@@ -38,7 +38,7 @@
   {
     "id": 10,
     "title": "Porte de la chambre",
-    "desc": "C'est l'objet 6",
+    "desc": "Elle est verrouillée",
     "canceled": []
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": 1987,
     "title": "Contraception Masculine",
-    "desc": "La contraception masculine n'est malheureusement pas très en vogue, elle est en effet bien moins développée que sont équivalent féminin. Mais il existe quand même des solutions !! Et oui, la contraception masculine existe ! Évidements les préservatifs masculins, qui en plus d'être un moyen de contraception très efficace si bien utilisé, protège aussi des infections sexuellement transmissible https://www.lecrips-idf.net/consentement-sexuel. La pilule masculine verra peut être le jour un jour aussi ! Pour l'instant le protocole à été validé par l'Organisation Mondiale de la Santé. La contraception thermique existe aussi depuis plus de trente ans. https://www.contraceptionmasculine.fr/la-methode-thermique/#:~:text=La%20méthode%20thermique%20consiste%20a,%27un%20sous-vêtement%20adapté. (à raccourcir surement) il existe aussi un méthode qu'il faut considérer comme irréversible : la vasectomie. https://vasectomie.net/la-vasectomie/quest-ce-que-la-vasectomie/",
+    "desc": "La contraception masculine n'est malheureusement pas très en vogue, elle est en effet bien moins développée que sont équivalent féminin. Mais il existe quand même des solutions !! Et oui, la contraception masculine existe ! Évidements les préservatifs masculins, qui en plus d'être un moyen de contraception très efficace si bien utilisé, protège aussi des infections sexuellement transmissible https://www.lecrips-idf.net/consentement-sexuel. La pilule masculine verra peut être le jour un jour aussi ! Pour l'instant le protocole à été validé par l'Organisation Mondiale de la Santé. La contraception thermique existe aussi depuis plus de trente ans. https://www.contraceptionmasculine.fr/la-methode-thermique/#:~:text=La%20méthode%20thermique%20consiste%20a,%27un%20sous-vêtement%20adapté. il existe aussi un méthode qu'il faut considérer comme irréversible : la vasectomie. https://vasectomie.net/la-vasectomie/quest-ce-que-la-vasectomie/",
     "canceled": []
   },
   {
@@ -166,8 +166,8 @@
   },
   {
     "id": 306,
-    "title": "Indice du miroir (TEMPORAIRE)",
-    "desc": "TEMPORAIRE",
+    "title": "Indice du Vendeur",
+    "desc": "'l'alphabet de signes'. Bien joué, le mot était bien PLAISIR.",
     "canceled": [
       220,
       202

@@ -90,14 +90,14 @@
         <div class="sticky lg:fixed z-10 inset-x-0 bottom-0 bg-gray-800 p-4 flex justify-between mt-10">
             <div>
                 <label for="search" class="ml-4">Chercher</label>
-                <form class="flex items-center">
+                <div class="flex items-center">
                     <input type="text" id="search"
                         class="text-gray-100 focus:outline-none placeholder:text-gray-400 focus:ring-primary-200 bg-gray-500 rounded-l-full"
                         placeholder="00" v-model="search">
                     <a :href="`?id=${search === '' ? 0 : search}`"
                         class="border border-transparent uppercase bg-primary-200 text-lg px-6 py-1.5 rounded-r-full text-white font-semibold inline-block hover:bg-primary-300 transition-colors shadow">Go
                         !</a>
-                </form>
+                </div>
             </div>
             <button @click="showInventory = true"
                 class="fixed z-10 top-24 sm:top-6 right-6 inline-block transition-transform hover:scale-105"><img
