@@ -73,7 +73,7 @@
         <div class="max-w-7xl mx-auto text-center">
             <h1 class="uppercase text-5xl text-center font-bold mt-8">Carte <span class="text-primary-200">{{
                     urlParams.id }}</span></h1>
-            <div v-if="selectedCard" class="flex flex-col lg:flex-row gap-6 px-4 flex-start">
+            <div v-if="selectedCard && !isSelectedCardCanceled" class="flex flex-col lg:flex-row gap-6 px-4 flex-start">
                 <img :src="`./images/${selectedCard.id}.png`" class="w-full max-w-2xl mx-auto mt-8 object-contain"
                     alt="">
                 <div class="lg:text-left">
@@ -82,9 +82,13 @@
                 </div>
             </div>
             <div v-else class="mt-16">
-                <h2 class="uppercase text-4xl md:text-9xl text-center text-primary-200 font-bold">Erreur</h2>
-                <p class="text-xl mt-12">Cette carte n'existe pas</p>
-                <p class="text-xl"><span class="font-bold">Attention</span> : tu perds 3 points</p>
+                <h2 class="uppercase text-4xl md:text-9xl text-center text-primary-200 font-bold">{{
+                    isSelectedCardCanceled ? "Oups !" : "Erreur" }}</h2>
+                <p class="text-xl mt-12">
+                    {{ isSelectedCardCanceled ? "Tu as déjà utilisé cette carte." : "Cette carte n'existe pas" }}
+                </p>
+                <p v-if="!isSelectedCardCanceled" class="text-xl"><span class="font-bold">Attention</span> : tu perds 3
+                    points</p>
             </div>
         </div>
         <div class="sticky lg:fixed z-10 inset-x-0 bottom-0 bg-gray-800 p-4 flex justify-between mt-10">
