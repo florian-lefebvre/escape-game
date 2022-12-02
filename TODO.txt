@@ -1,5 +1,7 @@
-- compteur de points
-- localstorage
+x compteur de points
+X localstorage
 - compte à rebours
-- erreur 404 + perds un point
-- si déjà visité et discard => t'as déjà tout vu
+x erreur 404 + perds un point
+X si déjà visité et discard => t'as déjà tout vus
+- endgame => tout l'inventaire
+- victoire

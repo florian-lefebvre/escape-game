@@ -8,6 +8,7 @@ createApp({
       data: null,
       inventory: [],
       canceled: [],
+      score: 100,
       urlParams: {
         id: params.get("id"),
       },
@@ -20,6 +21,7 @@ createApp({
     if (this.urlParams.id && this.data.find((e) => e.id == this.urlParams.id)) {
       this.manageInventory(this.urlParams.id);
     }
+    this.decreaseScore();
   },
   computed: {
     selectedCard() {
@@ -46,6 +48,10 @@ createApp({
       if (storedCanceled) {
         this.canceled = JSON.parse(storedCanceled);
       }
+      const storedScore = localStorage.getItem("score");
+      if (storedScore) {
+        this.score = JSON.parse(storedScore);
+      }
     },
     manageInventory(id) {
       const canceledCard = this.canceled.find((e) => e.id == id);
@@ -65,6 +71,20 @@ createApp({
         }
       }
     },
+    decreaseScore() {
+      if (!this.selectedCard) {
+        this.score -= 3;
+      }
+    },
+    parseMarkdown(str) {
+      const converter = new showdown.Converter();
+      setTimeout(() => {
+        for (const link of document.querySelectorAll(".prose a")) {
+          link.target = "_blank";
+        }
+      }, 50);
+      return converter.makeHtml(str);
+    },
   },
   watch: {
     inventory: {
@@ -78,6 +98,9 @@ createApp({
         localStorage.setItem("canceled", JSON.stringify(n));
       },
       deep: true,
+    },
+    score(n, o) {
+      localStorage.setItem("score", n);
     },
   },
 }).mount("#app");

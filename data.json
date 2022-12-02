@@ -74,47 +74,32 @@
   {
     "id": 1967,
     "title": "Contraception Féminine",
-    "desc": "Il existe un tas de manières de se protéger pour les femmes. Nous avons évidemment la pilule qui est aujourd'hui bien démocratisée et facilement accessible et intégralement prise en charge par la sécurité sociale pour les femmes de moins de 26 ans et est donc entièrement gratuite jusqu'à cet âge là. Mais même si la pilule est le moyen le plus utilisé, il y a bien d'autres solutions. Nous pouvons parler du préservatif féminin bien moins populaire que sa version masculine ce qui ne le rend pas moins efficace. Il y a également l'implant, à l'instar de la pilule, il est gratuit jusqu'à 26 ans. Il s'agit donc d'un implant que l'on insère sous la peau et que l'on peut laisser ainsi durant 3 ans maximum. Il injecte des hormones bloquant l'ovulation. Le stérilet est un petit objet pouvant être inséré dans l'utérus par un gynécologue, il existe différents types de stérilets mais tous auront la même fonction : empêcher les spermatozoïdes d'agir en bloquant l'entrée ou en les affaiblissant selon type de stérilet utilisé. Nous avons parlé des moyens contraceptifs féminins les plus connus/utilisés mais il en existe bien d'autres. Pour plus d'informations sur ces derniers rendez-vous sur : https://questionsexualite.fr/choisir-sa-contraception/tous-les-modes-de-contraception",
+    "desc": "Il existe un tas de manières de se protéger pour les femmes. Nous avons évidemment la pilule qui est aujourd'hui bien démocratisée et facilement accessible et intégralement prise en charge par la sécurité sociale pour les femmes de moins de 26 ans et est donc entièrement gratuite jusqu'à cet âge là. Mais même si la pilule est le moyen le plus utilisé, il y a bien d'autres solutions. Nous pouvons parler du préservatif féminin bien moins populaire que sa version masculine ce qui ne le rend pas moins efficace. Il y a également l'implant, à l'instar de la pilule, il est gratuit jusqu'à 26 ans. Il s'agit donc d'un implant que l'on insère sous la peau et que l'on peut laisser ainsi durant 3 ans maximum. Il injecte des hormones bloquant l'ovulation. Le stérilet est un petit objet pouvant être inséré dans l'utérus par un gynécologue, il existe différents types de stérilets mais tous auront la même fonction : empêcher les spermatozoïdes d'agir en bloquant l'entrée ou en les affaiblissant selon type de stérilet utilisé. Nous avons parlé des moyens contraceptifs féminins les plus connus/utilisés mais il en existe bien d'autres. Pour plus d'informations sur ces derniers rendez-vous sur : [https://questionsexualite.fr/choisir-sa-contraception/tous-les-modes-de-contraception](https://questionsexualite.fr/choisir-sa-contraception/tous-les-modes-de-contraception)",
     "canceled": []
   },
   {
     "id": 1987,
     "title": "Contraception Masculine",
-    "desc": "La contraception masculine n'est malheureusement pas très en vogue, elle est en effet bien moins développée que sont équivalent féminin. Mais il existe quand même des solutions !! Et oui, la contraception masculine existe ! Nous avons évidement, les préservatifs masculins, qui en plus d'être un moyen de contraception très efficace si bien utilisé, protège aussi des infections sexuellement transmissibles https://www.lecrips-idf.net/consentement-sexuel. La pilule masculine verra peut-être le jour un jour aussi ! Pour l'instant le protocole a été validé par l'Organisation Mondiale de la Santé. La contraception thermique existe aussi depuis plus de trente ans. https://www.contraceptionmasculine.fr/la-methode-thermique/#:~:text=La%20méthode%20thermique%20consiste%20a,%27un%20sous-vêtement%20adapté. Il y a aussi une méthode qu'il faut considérer comme irréversible : la vasectomie. https://vasectomie.net/la-vasectomie/quest-ce-que-la-vasectomie/",
+    "desc": "La contraception masculine n'est malheureusement pas très en vogue, elle est en effet bien moins développée que sont équivalent féminin. Mais il existe quand même des solutions !! Et oui, la contraception masculine existe ! Nous avons évidement, les préservatifs masculins, qui en plus d'être un moyen de contraception très efficace si bien utilisé, protège aussi des infections sexuellement transmissibles [https://www.lecrips-idf.net/consentement-sexuel](https://www.lecrips-idf.net/consentement-sexuel). La pilule masculine verra peut-être le jour un jour aussi ! Pour l'instant le protocole a été validé par l'Organisation Mondiale de la Santé. La contraception thermique existe aussi depuis plus de trente ans. [https://www.contraceptionmasculine.fr/la-methode-thermique/](https://www.contraceptionmasculine.fr/la-methode-thermique/#:~:text=La%20méthode%20thermique%20consiste%20a,%27un%20sous-vêtement%20adapté). Il y a aussi une méthode qu'il faut considérer comme irréversible : la vasectomie. [https://vasectomie.net/la-vasectomie/quest-ce-que-la-vasectomie/](https://vasectomie.net/la-vasectomie/quest-ce-que-la-vasectomie/)",
     "canceled": []
   },
   {
     "id": 11,
     "title": "Livre de Scouts",
     "desc": "Un manuel de scout qui peut vous apprendre un tas de choses sur les nœuds.",
-    "canceled": [
-      47,
-      99,
-      64,
-      1967,
-      81,
-      1987
-    ]
+    "canceled": [17, 47, 99, 64, 1967, 81, 1987]
   },
   {
     "id": 36,
     "title": "Drap avec des noeuds",
     "desc": "Oh bien joué ! Mais pourquoi faire ?",
-    "canceled": [
-      11,
-      25
-    ]
+    "canceled": [11, 25]
   },
   {
     "id": 106,
     "title": "Extérieur",
     "desc": "Il est tard, pas sûr que ce sex-shop soit ouvert.",
-    "canceled": [
-      36,
-      70,
-      37,
-      10
-    ]
+    "canceled": [36, 70, 37, 10]
   },
   {
     "id": 299,
@@ -125,7 +110,7 @@
   {
     "id": 300,
     "title": "DVD",
-    "desc": "<stong>S</strong>e faire plaisir en solitaire ou à plusieurs en regardant un film coquin c'est possible, ça peut même aider et surtout il ne faut pas culpabiliser pour ça, mais il faut faire attention à certaines choses.Le porno ne correspond pas à la réalité, ça peut sembler basique mais il est toujours bon de le rappeler !! Les représentations masculines et féminines sont très éloignées de la réalité et l'image renvoyée peut, selon le film, entretenir un modèle de relation prônant la culture du viol. : http://nonviolence.ca/index.php/pornographie-aux-origines-de-la-culture-du-viol/. - CRNV. Mais il existe des façons de consommer autrement comme par exemple le porno audio ou le porno féministe : https://www.terrafemina.com/article/podcast-porno-5-podcasts-sexy-en-francais-a-ecouter_a360351/1 https://www.terrafemina.com/article/sites-de-porno-feministe-6-sites-incontournables-a-binge-watcher_a352948/1. L'addiction au porno existe et voici la liste des signes possibles d'une addiction : https://assodeclic.com/publications/accro-au-porno-symptomes.",
+    "desc": "**S**e faire plaisir en solitaire ou à plusieurs en regardant un film coquin c'est possible, ça peut même aider et surtout il ne faut pas culpabiliser pour ça, mais il faut faire attention à certaines choses.Le porno ne correspond pas à la réalité, ça peut sembler basique mais il est toujours bon de le rappeler !! Les représentations masculines et féminines sont très éloignées de la réalité et l'image renvoyée peut, selon le film, entretenir un modèle de relation prônant la culture du viol. : http://nonviolence.ca/index.php/pornographie-aux-origines-de-la-culture-du-viol/. - CRNV. Mais il existe des façons de consommer autrement comme par exemple le porno audio ou le porno féministe : https://www.terrafemina.com/article/podcast-porno-5-podcasts-sexy-en-francais-a-ecouter_a360351/1 https://www.terrafemina.com/article/sites-de-porno-feministe-6-sites-incontournables-a-binge-watcher_a352948/1. L'addiction au porno existe et voici la liste des signes possibles d'une addiction : [https://assodeclic.com/publications/accro-au-porno-symptomes](https://assodeclic.com/publications/accro-au-porno-symptomes).",
     "canceled": []
   },
   {
@@ -137,25 +122,25 @@
   {
     "id": 301,
     "title": "Poppers",
-    "desc": "Le Poppers ça peut être cool, mais comme toutes les drogues, cela peut comporter des risques. Heureusement, il existe énormément d'out<strong>i</strong>ls pour se renseigner sur les danger et les effets de la drogue. https://www.drugs.ie/fr/drugs_info/types_de_drogues/. Et il ne faut jamais oublier qu'un consentement sous l'effet d'une quelconque substance n'a aucune valeur. Si les deux personnes ont vraiment envie de faire des choses ensemble, alors iels peuvent très bien attendre le lendemain pour s'assurer que le consentement est bien réciproque et définitif.",
+    "desc": "Le Poppers ça peut être cool, mais comme toutes les drogues, cela peut comporter des risques. Heureusement, il existe énormément d'out**i**ls pour se renseigner sur les danger et les effets de la drogue. [https://www.drugs.ie/fr/drugs_info/types_de_drogues/](https://www.drugs.ie/fr/drugs_info/types_de_drogues/). Et il ne faut jamais oublier qu'un consentement sous l'effet d'une quelconque substance n'a aucune valeur. Si les deux personnes ont vraiment envie de faire des choses ensemble, alors iels peuvent très bien attendre le lendemain pour s'assurer que le consentement est bien réciproque et définitif.",
     "canceled": []
   },
   {
     "id": 302,
     "title": "Carton",
-    "desc": "Le carton en provenance de <strong>LA</strong>, mais il n'y a rien dedans...",
+    "desc": "Le carton en provenance de **LA**, mais il n'y a rien dedans...",
     "canceled": []
   },
   {
     "id": 303,
     "title": "Lingerie",
-    "desc": "En voilà une belle pièce de lingerie ! On peut porter ce genre de vêtement (tout comme plein d'autres d'ailleurs) pour différentes occasions. Néanmoins 27% des interrogé·e·s pensent encore que la tenue de la victime minimise la responsabilité du violeur.Pourtant on sait aujourd'hui que c'est totalement faux !! Tant qu'on y est, on va rappeler 4 faits impo<strong>r</strong>tant et malheureusement trop méconnus sur le viol (source et plus d'info : https://www.amnesty.fr/focus/cinq-choses-a-savoir-sur-le-viol) -la majorité des viols sont commis par une personne que la victime connaît -en général, les victimes de viol n'opposent pas de résistance physique, par peur, par tétanie -les signalements abusifs sont rares -la consommation d'alcool ou de drogues ne justifie JAMAIS un viol",
+    "desc": "En voilà une belle pièce de lingerie ! On peut porter ce genre de vêtement (tout comme plein d'autres d'ailleurs) pour différentes occasions. Néanmoins 27% des interrogé·e·s pensent encore que la tenue de la victime minimise la responsabilité du violeur.Pourtant on sait aujourd'hui que c'est totalement faux !! Tant qu'on y est, on va rappeler 4 faits impo**r**tant et malheureusement trop méconnus sur le viol (source et plus d'info : [https://www.amnesty.fr/focus/cinq-choses-a-savoir-sur-le-viol](https://www.amnesty.fr/focus/cinq-choses-a-savoir-sur-le-viol)) -la majorité des viols sont commis par une personne que la victime connaît -en général, les victimes de viol n'opposent pas de résistance physique, par peur, par tétanie -les signalements abusifs sont rares -la consommation d'alcool ou de drogues ne justifie JAMAIS un viol",
     "canceled": []
   },
   {
     "id": 304,
     "title": "Menottes",
-    "desc": "Wow c'est bizarre ça ! Enfin bon à chacun et chacune ses petits fantasmes. Le <strong>p</strong>lus important, c'est le CON-SEN-TE-MENT. Vidéo sympa sur le consentement et les tasses de thé https://www.youtube.com/watch?v=S-50iVx_yxU. Le consentement signifie que non veut dire non mais pas seulement. À chaque instant le consentement doit être : - donné librement : sans contraintes extérieure. - éclairé : les partenaires doivent mutuellement s'informer des pratiques et ne pas dissimuler leurs intentions. - spécifique : consentir à certaines pratiques ne veut pas dire consentir à toutes les pratiques. - réversible : à chaque instant, on peut changer d'avis. - enthousiaste : la relation doit être désirée, il faut donc un grand oui ! https://www.lecrips-idf.net/consentement-sexuel",
+    "desc": "Wow c'est bizarre ça ! Enfin bon à chacun et chacune ses petits fantasmes. Le **p**lus important, c'est le CON-SEN-TE-MENT. Vidéo sympa sur le consentement et les tasses de thé [https://www.youtube.com/watch?v=S-50iVx_yxU](https://www.youtube.com/watch?v=S-50iVx_yxU). Le consentement signifie que non veut dire non mais pas seulement. À chaque instant le consentement doit être : - donné librement : sans contraintes extérieure. - éclairé : les partenaires doivent mutuellement s'informer des pratiques et ne pas dissimuler leurs intentions. - spécifique : consentir à certaines pratiques ne veut pas dire consentir à toutes les pratiques. - réversible : à chaque instant, on peut changer d'avis. - enthousiaste : la relation doit être désirée, il faut donc un grand oui ! [https://www.lecrips-idf.net/consentement-sexuel](https://www.lecrips-idf.net/consentement-sexuel)",
     "canceled": []
   },
   {
@@ -168,18 +153,7 @@
     "id": 306,
     "title": "Indice du Vendeur",
     "desc": "'l'alphabet de signes'. Bien joué, le mot était bien PLAISIR.",
-    "canceled": [
-      220,
-      202,
-      106,
-      299,
-      300,
-      204,
-      301,
-      302,
-      304,
-      305
-    ]
+    "canceled": [220, 202, 106, 299, 300, 204, 301, 302, 304, 305]
   },
   {
     "id": 220,
@@ -196,6 +170,6 @@
   {
     "id": 142857,
     "desc": "Félicitation vous avez réussi l'Escape game ! N'oubliez pas de sortir couvert !",
-    "canceled":[]
+    "canceled": []
   }
 ]

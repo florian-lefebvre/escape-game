@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
     <script type="importmap">
           {
             "imports": {
@@ -14,7 +15,7 @@
           }
         </script>
     <script src="./scripts/app.js" type="module"></script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -49,6 +50,10 @@
         #app {
             display: contents;
         }
+
+        .prose :where(strong):not(:where([class~="not-prose"] *)) {
+            color: #9d53f8 !important;
+        }
     </style>
     <script>
             (function (d, t) {
@@ -78,7 +83,7 @@
                     alt="">
                 <div class="lg:text-left">
                     <div class="uppercase text-5xl font-bold text-white mt-8">{{ selectedCard.title }}</div>
-                    <div class="text-lg mt-2">{{ selectedCard.desc }}</div>
+                    <div class="text-lg mt-2 prose prose-invert" v-html="parseMarkdown(selectedCard.desc)"></div>
                 </div>
             </div>
             <div v-else class="mt-16">
@@ -103,6 +108,9 @@
                         !</a>
                 </div>
             </div>
+            <button @click="showInventory = true"
+                class="fixed z-10 top-24 sm:top-6 left-6 inline-block transition-transform hover:scale-105">{{ score
+                }}</button>
             <button @click="showInventory = true"
                 class="fixed z-10 top-24 sm:top-6 right-6 inline-block transition-transform hover:scale-105"><img
                     src="./images/bag.png" class="w-28" alt=""></button>
